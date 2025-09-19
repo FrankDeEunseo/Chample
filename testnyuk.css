@@ -1,0 +1,194 @@
+/* Navbar (biar sama) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 50, 80, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px 40px;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+  transition: text-shadow 0.3s ease;
+}
+.logo-text:hover {
+  text-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff, 0 0 30px #00e5ff;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+.nav-link:hover {
+  color: #ffeb3b;
+}
+.nav-link.active {
+  color: #00e5ff;
+  font-weight: bold;
+}
+
+/* Section Tentang Kami */
+.about-section {
+  padding: 150px 40px 60px;
+  text-align: center;
+}
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #fdfdfd;
+  text-shadow: 0 0 15px rgba(0,238,255,0.8);
+}
+
+/* Team Container */
+.team-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Team Card - Kotak Glow */
+.team-card {
+  position: relative;
+  width: 280px;
+  height: 300px;
+  background: rgba(0, 30, 60, 0.7);
+  border: 2px solid rgba(0, 229, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 45px rgba(0, 229, 255, 0.8);
+}
+
+
+.about-us {
+  padding: 6rem 5% 5rem;
+  background-color: rgba(48, 89, 114, 0.873);
+}
+.about-title {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 4rem;
+  color: #fff;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.team-member {
+  background-color: #1e1e1e;
+  padding: 3rem 2.5rem;
+  border-radius: 2rem;
+  width: 340px;
+  text-align: center;
+  color: white;
+  border: 2px solid #0004fd;
+  box-shadow: 0 0 20px rgba(0, 145, 255, 0.937);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 30px rgba(0, 145, 255, 0.937);
+}
+
+.team-member img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 145, 255, 0.937);
+  box-shadow: 0 0 15px rgba(0, 145, 255, 0.937);
+  margin-bottom: 2rem;
+}
+
+.team-member:hover img {
+  box-shadow: 0 0 25px rgba(0, 145, 255, 0.937);
+}
+
+.team-member h3 {
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+  color: #0055ff;
+}
+
+.team-member .quote {
+  font-style: italic;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.team-member p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 90%;
+  }
+
+  .about-title {
+    font-size: 3.5rem;
+  }
+
+  .team-member h3 {
+    font-size: 2.4rem;
+  }
+
+  .team-member p,
+  .team-member .quote {
+    font-size: 1.5rem;
+  }
+}
